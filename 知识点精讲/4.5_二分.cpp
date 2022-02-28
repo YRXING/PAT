@@ -1,11 +1,11 @@
-//Ö»ÒªÎÊÌâ¾ßÓĞµ¥µ÷ĞÔ£¬¶¼¿ÉÓÃ¶ş·ÖË¼ÏëÇó½â
+//åªè¦é—®é¢˜å…·æœ‰å•è°ƒæ€§ï¼Œéƒ½å¯ç”¨äºŒåˆ†æ€æƒ³æ±‚è§£
 
-//¶ş·ÖÇø¼äÎª×ó±ÕÓÒ±Õ[left,right],´«ÈëµÄ³õÖµÎª[0,n-1]
-//ĞòÁĞµİÔö
+//äºŒåˆ†åŒºé—´ä¸ºå·¦é—­å³é—­[left,right],ä¼ å…¥çš„åˆå€¼ä¸º[0,n-1]
+//åºåˆ—é€’å¢
 int binarySearch(int A[],int left,int right,int x){
     int mid;
-    while(left<=right){  //left > right ¾ÍÃ»°ì·¨ĞÎ³É±ÕÇø¼äÁË
-        mid = (left+right)/2;//±ÜÃâÒç³ö ¿ÉÒÔÓÃ mid = left+(right-left)/2 ´úÌæ
+    while(left<=right){  //left > right å°±æ²¡åŠæ³•å½¢æˆé—­åŒºé—´äº†
+        mid = (left+right)/2;//é¿å…æº¢å‡º å¯ä»¥ç”¨ mid = left+(right-left)/2 ä»£æ›¿
         if(A[mid]==x) return mid;
         else if(A[mid]>x) right = mid-1;
         else left = mid+1;
@@ -13,7 +13,7 @@ int binarySearch(int A[],int left,int right,int x){
     return -1;
 }
 
-//·µ»ØµÚÒ»¸ö´óÓÚµÈÓÚxµÄÔªËØÎ»ÖÃ[left,right]
+//è¿”å›ç¬¬ä¸€ä¸ªå¤§äºç­‰äºxçš„å…ƒç´ ä½ç½®[left,right]
 int lower_bound(int A[],int left,int right,int x){
     int mid;
     while(left<right){
@@ -23,8 +23,8 @@ int lower_bound(int A[],int left,int right,int x){
     }
     return left;
 }
-
-//·µ»ØµÚÒ»¸ö´óÓÚxµÄÔªËØÎ»ÖÃ,[left,right]
+//algorithmç®—æ³•ä¸­æœ‰è¿™ä¸ªå‡½æ•°ï¼Œlower_bound(v.begin(),v.end(),value)-v.begin()
+//è¿”å›ç¬¬ä¸€ä¸ªå¤§äºxçš„å…ƒç´ ä½ç½®,[left,right]
 int upper_bound(int A[],int left,int right ,int x){
     int mid;
     while(left<right){
@@ -35,19 +35,19 @@ int upper_bound(int A[],int left,int right ,int x){
     return left;
 }
 
-//µÚÒ»¸öÂú×ãÄ³Ìõ¼şÔªËØµÄÎ»ÖÃ,(left,right]
+//ç¬¬ä¸€ä¸ªæ»¡è¶³æŸæ¡ä»¶å…ƒç´ çš„ä½ç½®,(left,right]
 int solve(int left,int right){
     int mid;
     while(left+1<right){
         mid = (left+right)/2;
-        if(Ìõ¼ş³ÉÁ¢) right = mid;
+        if(æ¡ä»¶æˆç«‹) right = mid;
         else left = mid+1;
     }
     return right;
 }
 
-//Ä¾°ôÇĞ¸îÎÊÌâ:
-//¸ø³öN¸ùÄ¾°ô£¬³¤¶È¾ùÒÑÖª£¬ÏÖÏ£ÍûÍ¨¹ıÇĞ¸îËûÃÇÀ´µÃµ½ÖÁÉÙK¶Î³¤¶ÈÏàµÈµÄÄ¾°ô
-//ÎÊÕâĞ©³¤¶ÈÏàµÈµÄÄ¾°ô³¤¶ÈL×î³¤ÄÜÓĞ¶à³¤¡£
-//LÔ½³¤£¬KÔ½ÉÙ£¬¿ÉÓÃ¶ş·Ö.
+//æœ¨æ£’åˆ‡å‰²é—®é¢˜:
+//ç»™å‡ºNæ ¹æœ¨æ£’ï¼Œé•¿åº¦å‡å·²çŸ¥ï¼Œç°å¸Œæœ›é€šè¿‡åˆ‡å‰²ä»–ä»¬æ¥å¾—åˆ°è‡³å°‘Kæ®µé•¿åº¦ç›¸ç­‰çš„æœ¨æ£’
+//é—®è¿™äº›é•¿åº¦ç›¸ç­‰çš„æœ¨æ£’é•¿åº¦Læœ€é•¿èƒ½æœ‰å¤šé•¿ã€‚
+//Lè¶Šé•¿ï¼ŒKè¶Šå°‘ï¼Œå¯ç”¨äºŒåˆ†.
 
