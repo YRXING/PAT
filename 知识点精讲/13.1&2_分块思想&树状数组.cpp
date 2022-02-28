@@ -51,7 +51,7 @@ getSum(y)-getSum(x-1);//[x,y]内的数之和
 //给A[x]加上v，如何更新C数组
 //让x不断加上lowbit(x),让每步的C[x]机上v，知道x超过给定的数据范围为止
 void update(int x,int v){//第x个数加v
-    for(int i=x;i<+N;i+=lowbit(x)){
+    for(int i=x;i<=N;i+=lowbit(x)){
         c[i]+=v;
     }
 }
@@ -79,7 +79,7 @@ int main(){
     memset(c,0,sizeof(c));//树状数组初始为0
     for(int i=0;i<n;i++){
         scanf("%d",&x);
-        update(x,1);
+        update(x,1);//相当于求A[x]=1的前缀和
         printf("%d\n",getSum(x-1));
     }
     return 0;
@@ -88,6 +88,10 @@ int main(){
 
 //统计元素左边比元素大的数等价于计算hash[x+1]+...+hash[N]=getSum(N)-getSum(x);
 //离散化到1-N
+//即：如果序列跨度比较大，或者包含负数的时候，无法用hash[x]=1来简单表示某个数是否存在时，需要离散化存储
+//就是把序列的value通过排序后，转变为1-N。其中N为序列的大小。
+//比如序列：-3 100000 26 -99999999
+//离散化后：2    4     3     1
 struct node{
     int val;//序列元素的值
     int pos;//原始序号
