@@ -1,20 +1,20 @@
 //vector
 vector<typename> name;
-//Èç¹ûtypenameÊÇÒ»¸öSTLÈİÆ÷£¬¶¨ÒåÊ±ºò¼Ó¿Õ¸ñ
-vector<vector<int> >  //Á½¸öÎ¬¶È¶¼ÊÇ±ä³¤µÄ
-vector<int> vi[100] //vectorÊı×é,Ò»Î¬È·¶¨
+//å¦‚æœtypenameæ˜¯ä¸€ä¸ªSTLå®¹å™¨ï¼Œå®šä¹‰æ—¶å€™åŠ ç©ºæ ¼
+vector<vector<int> >  //ä¸¤ä¸ªç»´åº¦éƒ½æ˜¯å˜é•¿çš„
+vector<int> vi[100] //vectoræ•°ç»„,ä¸€ç»´ç¡®å®š
 
-//Í¨¹ıÏÂ±ê·ÃÎÊ
+//é€šè¿‡ä¸‹æ ‡è®¿é—®
 name[index];
-//Í¨¹ıµü´úÆ÷
+//é€šè¿‡è¿­ä»£å™¨
 vector<typename>::iterator it=name.begin();//*(it+i)
 //name[i]=====*(vi.begin()+i)
 
-//×¢Òâ£¡£¡£¡
-//1.ÃÀ¹úÈËÏ°¹ßÊ¹ÓÃ[begin,end)Ë¼Ïë name.end()Ö¸ÏòrearÏÂÒ»¸ö,²»´æÈÎºÎÔªËØ
-//2.Ö»ÓĞvectorºÍstring²ÅÔÊĞíÊ¹ÓÃname.begin()+3ÕâÖÖµü´úÆ÷¼ÓÉÏÕûÊıµÄĞ´·¨
+//æ³¨æ„ï¼ï¼ï¼
+//1.ç¾å›½äººä¹ æƒ¯ä½¿ç”¨[begin,end)æ€æƒ³ name.end()æŒ‡å‘rearä¸‹ä¸€ä¸ª,ä¸å­˜ä»»ä½•å…ƒç´ 
+//2.åªæœ‰vectorå’Œstringæ‰å…è®¸ä½¿ç”¨name.begin()+3è¿™ç§è¿­ä»£å™¨åŠ ä¸Šæ•´æ•°çš„å†™æ³•
 
-//³£ÓÃº¯Êı
+//å¸¸ç”¨å‡½æ•°
 push_back();
 pop_back();
 size();
@@ -22,55 +22,55 @@ clear();
 insert(it,x);
 erase(it)  erase(first,last) //[first,last)
 
-//set,×Ô¶¯ÓĞĞò²»ÖØ¸´
+//set,è‡ªåŠ¨æœ‰åºä¸é‡å¤
 set<typename> name;
-//Ö»ÄÜÍ¨¹ıµü´úÆ÷·ÃÎÊ
-set<typename>::iterator it;//Ö»ÄÜÊ¹ÓÃ*(it++)
-//³£ÓÃº¯Êı
+//åªèƒ½é€šè¿‡è¿­ä»£å™¨è®¿é—®
+set<typename>::iterator it;//åªèƒ½ä½¿ç”¨*(it++)
+//å¸¸ç”¨å‡½æ•°
 insert(x)
-find(value) //·µ»Øµü´úÆ÷
+find(value) //è¿”å›è¿­ä»£å™¨
 erase(it)  erase(value) erase(first,last)
 size()
 clear()
 
 //string
 string str="****",str("sfsdf");
-//Ö»ÄÜÓÃcin,cout¶ÁÈëºÍÊä³ö,»òÕßstr.c_str()×ªÎª×Ö·ûÊı×é
+//åªèƒ½ç”¨cin,coutè¯»å…¥å’Œè¾“å‡º,æˆ–è€…str.c_str()è½¬ä¸ºå­—ç¬¦æ•°ç»„
 
-//Í¨¹ıÏÂ±ê·ÃÎÊ
+//é€šè¿‡ä¸‹æ ‡è®¿é—®
 str[i]
-//Í¨¹ıµü´úÆ÷
+//é€šè¿‡è¿­ä»£å™¨
 string::iterator it;// *(it+i)
-str1+str2 //Æ´½Ó
+str1+str2 //æ‹¼æ¥
 length()===size()
 insert(pos,string)
-insert(it,it2,it3)//itÔ­×Ö·û´®Óû²åÈëÎ»ÖÃ,it2 it3Îª´ı²åÈë×Ö·û´®µÄÊ×Î»µü´úÆ÷,×ó¿ªÓÒ±Õ
+insert(it,it2,it3)//itåŸå­—ç¬¦ä¸²æ¬²æ’å…¥ä½ç½®,it2 it3ä¸ºå¾…æ’å…¥å­—ç¬¦ä¸²çš„é¦–ä½è¿­ä»£å™¨,å·¦å¼€å³é—­
 erase(it) erase(first,last) erase(pos,length)
 clear()
 substr(pos,length)
-string::npos //³£Êı£¬ÖµÎª-1£¬ÓÃ×÷find()Ê§°ÜÊ±µÄ·µ»ØÖµ
-find(str2) //·µ»Østr2µÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬Ê§°Ü·µ»Østring::npos
-find(str2,pos)//´Ópos¿ªÊ¼Æ¥Åä
-replace(pos,len,str2)//pos¿ªÊ¼³¤¶ÈÎªlenµÄÌæ»»Îªstr2
+string::npos //å¸¸æ•°ï¼Œå€¼ä¸º-1ï¼Œç”¨ä½œfind()å¤±è´¥æ—¶çš„è¿”å›å€¼
+find(str2) //è¿”å›str2ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œå¤±è´¥è¿”å›string::npos
+find(str2,pos)//ä»poså¼€å§‹åŒ¹é…
+replace(pos,len,str2)//poså¼€å§‹é•¿åº¦ä¸ºlençš„æ›¿æ¢ä¸ºstr2
 replace(it1,it2,str2)
-to_string()//»ù±¾ÀàĞÍ×ªstring
-atoi(str.c_str())//<stdlib.h>£¬ÏÈ°Ñstr×ªcharÊı×éÔÚ×ª»ù±¾ÀàĞÍ
+to_string()//åŸºæœ¬ç±»å‹è½¬string
+atoi(str.c_str())//<stdlib.h>ï¼Œå…ˆæŠŠstrè½¬charæ•°ç»„åœ¨è½¬åŸºæœ¬ç±»å‹
 atof(str.c_str())
 
 
 //map
-//map¿ÉÒÔ½«ÈÎºÎ»ù±¾ÀàĞÍ£¨°üÀ¨STLÈİÆ÷£©Ó³Éäµ½ÈÎºÎ»ù±¾ÀàĞÍ£¬Ò²¾Í¿ÉÒÔ½¨Á¢stringµ½intµÄÓ³Éä
+//mapå¯ä»¥å°†ä»»ä½•åŸºæœ¬ç±»å‹ï¼ˆåŒ…æ‹¬STLå®¹å™¨ï¼‰æ˜ å°„åˆ°ä»»ä½•åŸºæœ¬ç±»å‹ï¼Œä¹Ÿå°±å¯ä»¥å»ºç«‹stringåˆ°intçš„æ˜ å°„
 map<typename1,typename2> mp;
-map<string,int> mp;//Ö»ÄÜÓÃstring²»ÄÜÓÃcharÊı×é
-//mapµÄ¼üÊÇÎ¨Ò»µÄ
-//Í¨¹ıÏÂ±ê·ÃÎÊ
+map<string,int> mp;//åªèƒ½ç”¨stringä¸èƒ½ç”¨charæ•°ç»„
+//mapçš„é”®æ˜¯å”¯ä¸€çš„
+//é€šè¿‡ä¸‹æ ‡è®¿é—®
 mp[key]
-//Í¨¹ıµü´úÆ÷
+//é€šè¿‡è¿­ä»£å™¨
 map<typename1,typename2>::iterator it;
-it->first//·ÃÎÊ¼ü
-it->second//·ÃÎÊÖµ
-//map »áÒÔ¼ü´ÓĞ¡µ½´ó×Ô¶¯ÅÅĞò
-find(key)//·µ»Øµü´úÆ÷,Ê§°Ü·µ»Ømap.end()
+it->first//è®¿é—®é”®
+it->second//è®¿é—®å€¼
+//map ä¼šä»¥é”®ä»å°åˆ°å¤§è‡ªåŠ¨æ’åº
+find(key)//è¿”å›è¿­ä»£å™¨,å¤±è´¥è¿”å›map.end()
 erase(it) erase(key) erase(first,last)
 size()
 clear()
@@ -78,38 +78,50 @@ clear()
 
 //queue
 queue<typename> q;
-q.front(),q.back()//Ö»ÄÜÍ¨¹ıÕâÁ½ÖÖ·½Ê½·ÃÎÊ¶ÓÊ×£¬¶ÓÎ²;Ê¹ÓÃÇ°ĞèÒªÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
+q.front(),q.back()//åªèƒ½é€šè¿‡è¿™ä¸¤ç§æ–¹å¼è®¿é—®é˜Ÿé¦–ï¼Œé˜Ÿå°¾;ä½¿ç”¨å‰éœ€è¦åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 push(x)
 pop()
 empty()
 size()
 //priority_queue
 priority_queue<typename>  prio_q;
-top()//Ö»ÄÜÍ¨¹ıËü·ÃÎÊ¶ÓÊ×
+top()//åªèƒ½é€šè¿‡å®ƒè®¿é—®é˜Ÿé¦–
 push(x)
 pop()
 empty()
 size()
-//ÓÅÏÈ¼¶µÄ¶¨Òå
-//»ù±¾Êı¾İÀàĞÍÄ¬ÈÏÊı×ÖÔ½´óÓÅÏÈ¼¶Ô½¸ß
-priority_queue<int,vector<int>,less<int> > q;//Êı×Ö´óÓÅÏÈ¼¶¸ß
-priority_queue<int,vector<int>,greater<int> >q;//Êı×ÖĞ¡ÓÅÏÈ¼¶¸ß
-//½á¹¹ÌåÓÅÏÈ¼¶ÉèÖÃ
+//ä¼˜å…ˆçº§çš„å®šä¹‰
+//åŸºæœ¬æ•°æ®ç±»å‹é»˜è®¤æ•°å­—è¶Šå¤§ä¼˜å…ˆçº§è¶Šé«˜
+priority_queuw<Type,Container,Functional>; // Containerå¯ä»¥æ˜¯vectorï¼Œdequeue
+priority_queue<int,vector<int>,less<int> > q;//æ•°å­—å¤§ä¼˜å…ˆçº§é«˜
+priority_queue<int,vector<int>,greater<int> >q;//æ•°å­—å°ä¼˜å…ˆçº§é«˜
+/*
+ç»“æ„ä½“ä¼˜å…ˆçº§è®¾ç½®
+*/
+//1. è¿ç®—ç¬¦é‡è½½
 struct fruit{
     string name;
     int price;
     friend bool operator < (fruit f1,fruit f2){
         return f1.price<f2.price;
-    }//ÎŞĞèÖØÔØ> ºÍ= £¬»á³ö´í
-};//¶ÓÁĞÄÚ²¿ÒÔ¼Û¸ñ¸ßµÄÓÅÏÈ
+    }//æ— éœ€é‡è½½> å’Œ= ï¼Œä¼šå‡ºé”™
+};//é˜Ÿåˆ—å†…éƒ¨ä»¥ä»·æ ¼é«˜çš„ä¼˜å…ˆ
 
+// 2.é‡å†™ä»¿å‡½æ•°
 struct cmp{
     bool operator () (fruit f1,fruit f2){
         return f1.price>f2.price;
     }
 };
 priority_queue<fruit,vector<fruit>,cmp> q;
-//Èç¹û½á¹¹ÌåÄÚµÄÊı¾İ½ÏÎªÅÓ´ó£¬½¨ÒéÊ¹ÓÃÒıÓÃÌá¸ßĞ§ÂÊ
+//å¦‚æœç»“æ„ä½“å†…çš„æ•°æ®è¾ƒä¸ºåºå¤§ï¼Œå»ºè®®ä½¿ç”¨å¼•ç”¨æé«˜æ•ˆç‡
+
+//3. ä¼ ç»Ÿæ¯”è¾ƒå™¨
+bool cmp(fruit& a, fruit& b) {
+    return a.price<b.price;
+}
+
+priority_queue<fruit,vector<fruit>,decltype(&cmp)> q(cmp);
 
 
 //stack
@@ -121,28 +133,28 @@ empty()
 size()
 
 //pair
-//pair¿ÉÒÔ¿´×öÄÚ²¿ÓĞÁ½¸öÔªËØµÄ½á¹¹Ìå£¬ÕâÁ½¸öÔªËØµÄÀàĞÍ¿ÉÒÔÈÎÒâÖ¸¶¨
+//pairå¯ä»¥çœ‹åšå†…éƒ¨æœ‰ä¸¤ä¸ªå…ƒç´ çš„ç»“æ„ä½“ï¼Œè¿™ä¸¤ä¸ªå…ƒç´ çš„ç±»å‹å¯ä»¥ä»»æ„æŒ‡å®š
 #include<utility>//#include<map>
 pair<typename1,typename2> p;
-pair<string,int> p("haha",5)//¿ÉÒÔ½øĞĞ³õÊ¼»¯
-pair<string,int>("haha",5),make_pair("hah",5) //ÁÙÊ±¹¹½¨Ò»¸öpair
-p=make_pair("xixi",5);p.first,p.second;//·ÃÎÊ
-//¿ÉÒÔÖ±½Ó±È´óĞ¡£¬ÏÈ±È½Ïfirst,ÔÚ±È½Ïsecond
-//ÓÃÀ´´úÌæ¶şÔª½á¹¹Ìå£»×÷ÎªmapµÄ¼üÖµ¶ÔÀ´½øĞĞ²åÈë
+pair<string,int> p("haha",5)//å¯ä»¥è¿›è¡Œåˆå§‹åŒ–
+pair<string,int>("haha",5),make_pair("hah",5) //ä¸´æ—¶æ„å»ºä¸€ä¸ªpair
+p=make_pair("xixi",5);p.first,p.second;//è®¿é—®
+//å¯ä»¥ç›´æ¥æ¯”å¤§å°ï¼Œå…ˆæ¯”è¾ƒfirst,åœ¨æ¯”è¾ƒsecond
+//ç”¨æ¥ä»£æ›¿äºŒå…ƒç»“æ„ä½“ï¼›ä½œä¸ºmapçš„é”®å€¼å¯¹æ¥è¿›è¡Œæ’å…¥
 mp.insert(make_pair("heihei",5));
 
-//algorithm³£ÓÃº¯Êı
-max(),min(),abs()//¸¡µãĞÍÊ¹ÓÃ<cmath>ÀïÃæµÄfabs()
+//algorithmå¸¸ç”¨å‡½æ•°
+max(),min(),abs()//æµ®ç‚¹å‹ä½¿ç”¨<cmath>é‡Œé¢çš„fabs()
 swap(x,y)
-reverse(it,it2)//½«Êı×éÖ¸Õë»òµü´úÆ÷ÔÚ[it,it2)Ö®¼äµÄÔªËØ·´×ª
-next_permutation()//¸ø³öĞòÁĞÔÚÈ«ÅÅÁĞÖĞµÄÏÂÒ»¸öĞòÁĞ
-//STLÈİÆ÷ÖĞÖ»ÓĞvector,string,deque¿ÉÒÔÊ¹ÓÃsort,ÆäËûÒÑ¾­ÓĞĞò
+reverse(it,it2)//å°†æ•°ç»„æŒ‡é’ˆæˆ–è¿­ä»£å™¨åœ¨[it,it2)ä¹‹é—´çš„å…ƒç´ åè½¬
+next_permutation()//ç»™å‡ºåºåˆ—åœ¨å…¨æ’åˆ—ä¸­çš„ä¸‹ä¸€ä¸ªåºåˆ—
+//STLå®¹å™¨ä¸­åªæœ‰vector,string,dequeå¯ä»¥ä½¿ç”¨sort,å…¶ä»–å·²ç»æœ‰åº
 lower_bound(first,last,value)
-upper_bound(first,last,value) //·µ»ØÖ¸Õë»òÕßµü´úÆ÷
+upper_bound(first,last,value) //è¿”å›æŒ‡é’ˆæˆ–è€…è¿­ä»£å™¨
 
-/*eraseÎÊÌâ
-1.¶ÔÓÚ¹ØÁªÈİÆ÷£¨Èçmap£¬set£¬multimap£¬multiset£©£¬
-É¾³ıµ±Ç°µÄiterator£¬½ö½ö»áÊ¹µ±Ç°µÄiteratorÊ§Ğ§£¬Ö»ÒªÔÚeraseÊ±£¬µİÔöµ±Ç°µÄiterator¼´¿É
+/*eraseé—®é¢˜
+1.å¯¹äºå…³è”å®¹å™¨ï¼ˆå¦‚mapï¼Œsetï¼Œmultimapï¼Œmultisetï¼‰ï¼Œ
+åˆ é™¤å½“å‰çš„iteratorï¼Œä»…ä»…ä¼šä½¿å½“å‰çš„iteratorå¤±æ•ˆï¼Œåªè¦åœ¨eraseæ—¶ï¼Œé€’å¢å½“å‰çš„iteratorå³å¯
 set<int> valset = { 1,2,3,4,5,6 };
 set<int>::iterator iter;
 for (iter = valset.begin(); iter != valset.end(); )
@@ -152,28 +164,28 @@ for (iter = valset.begin(); iter != valset.end(); )
      else
           ++iter;
 }
-´«¸øeraseµÄÊÇÒ»¸ö¸±±¾
-2.¶ÔÓÚĞòÁĞÊ½ÈİÆ÷£¨Èçvector£¬deque£¬listµÈ£©£¬
-É¾³ıµ±Ç°µÄiterator»áÊ¹ºóÃæËùÓĞÔªËØµÄiterator¶¼Ê§Ğ§¡£
-ÕâÊÇÒòÎªvector£¬dequeÊ¹ÓÃÁËÁ¬Ğø·ÖÅäµÄÄÚ´æ£¬
-É¾³ıÒ»¸öÔªËØµ¼ÖÂºóÃæËùÓĞµÄÔªËØ»áÏòÇ°ÒÆ¶¯Ò»¸öÎ»ÖÃ¡£
-²»¹ıerase·½·¨¿ÉÒÔ·µ»ØÏÂÒ»¸öÓĞĞ§µÄiterator¡£
+ä¼ ç»™eraseçš„æ˜¯ä¸€ä¸ªå‰¯æœ¬
+2.å¯¹äºåºåˆ—å¼å®¹å™¨ï¼ˆå¦‚vectorï¼Œdequeï¼Œlistç­‰ï¼‰ï¼Œ
+åˆ é™¤å½“å‰çš„iteratorä¼šä½¿åé¢æ‰€æœ‰å…ƒç´ çš„iteratoréƒ½å¤±æ•ˆã€‚
+è¿™æ˜¯å› ä¸ºvectorï¼Œdequeä½¿ç”¨äº†è¿ç»­åˆ†é…çš„å†…å­˜ï¼Œ
+åˆ é™¤ä¸€ä¸ªå…ƒç´ å¯¼è‡´åé¢æ‰€æœ‰çš„å…ƒç´ ä¼šå‘å‰ç§»åŠ¨ä¸€ä¸ªä½ç½®ã€‚
+ä¸è¿‡eraseæ–¹æ³•å¯ä»¥è¿”å›ä¸‹ä¸€ä¸ªæœ‰æ•ˆçš„iteratorã€‚
 vector<int> val = { 1,2,3,4,5,6 };
 vector<int>::iterator iter;
 for (iter = val.begin(); iter != val.end(); )
 {
      if (3 == *iter)
-          iter = val.erase(iter);     //·µ»ØÏÂÒ»¸öÓĞĞ§µÄµü´úÆ÷£¬ÎŞĞè+1
+          iter = val.erase(iter);     //è¿”å›ä¸‹ä¸€ä¸ªæœ‰æ•ˆçš„è¿­ä»£å™¨ï¼Œæ— éœ€+1
      else
           ++iter;
 }
 */
 
-/*mapÊÇ°´ÕÕkey´ÓĞ¡µ½´óÀ´ÅÅĞòµÄ,Èç¹ûkeyÊÇ½á¹¹Ìå,ĞèÒªÔÚ½á¹¹ÌåÀïÃæÖØÔØÔËËã·û
-setÒ²Ò»Ñù
+/*mapæ˜¯æŒ‰ç…§keyä»å°åˆ°å¤§æ¥æ’åºçš„,å¦‚æœkeyæ˜¯ç»“æ„ä½“,éœ€è¦åœ¨ç»“æ„ä½“é‡Œé¢é‡è½½è¿ç®—ç¬¦
+setä¹Ÿä¸€æ ·
 struct node{
     ...
-    bool operator<(const node& other) const{  //Ò»¶¨Îªconst&
+    bool operator<(const node& other) const{  //ä¸€å®šä¸ºconst&
 
     }
 };
