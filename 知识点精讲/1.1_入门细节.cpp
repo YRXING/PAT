@@ -23,9 +23,10 @@ double      64位         1.7e-308~1.7e+308 实际精度15~16位
 7.gets 是以换行符\n作为输入结束，puts输出紧跟一个换行
 8.sscanf(str,"%d",&n) sprintf(str,"%d",n)
 9.PAT编译器不支持gets函数的使用，解决方案：
-    cin.getline(s,len);  //推荐！！！
+    char* s;cin.getline(s,len);  //推荐！！！,参数为char* 类型，len代表读入字符的多少，一共可以读入len-1个，因为还有一个要给'\0'。
     fgets(s,len,stdin);
     string str;getline(cin,str);
+    str.c_str()可以转为char*类型。
 10.scanf("%*c")表示忽略要读的项
     printf("%*s",len,"****")//输出所占位宽,不足补空格
     printf("%*.*s",a,b,"  ")//第二个控制输出长度.
