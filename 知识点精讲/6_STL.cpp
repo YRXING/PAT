@@ -152,6 +152,8 @@ next_permutation()//给出序列在全排列中的下一个序列
 lower_bound(first,last,value)
 upper_bound(first,last,value) //返回指针或者迭代器
 
+max_element(first,last) //返回数组或容器中的最大值
+
 /*erase问题
 1.对于关联容器（如map，set，multimap，multiset），
 删除当前的iterator，仅仅会使当前的iterator失效，只要在erase时，递增当前的iterator即可
