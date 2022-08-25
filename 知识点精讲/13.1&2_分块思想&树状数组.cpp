@@ -51,7 +51,7 @@ getSum(y)-getSum(x-1);//[x,y]内的数之和
 //给A[x]加上v，如何更新C数组
 //让x不断加上lowbit(x),让每步的C[x]机上v，知道x超过给定的数据范围为止
 void update(int x,int v){//第x个数加v
-    for(int i=x;i<=N;i+=lowbit(x)){
+    for(int i=x;i<=N;i+=lowbit(i)){
         c[i]+=v;
     }
 }
