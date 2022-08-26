@@ -53,7 +53,15 @@ find(str2) //返回str2第一次出现的位置，失败返回string::npos
 find(str2,pos)//从pos开始匹配
 replace(pos,len,str2)//pos开始长度为len的替换为str2
 replace(it1,it2,str2)
-to_string()//基本类型转string
+/*
+类型转换
+*/
+to_string()//基本类型转string,c++11新特性
+stringstream ss;ss << a;ss.str() //利用stringstream
+
+stoi,stol,stoll,stof //...string转基本类型
+stringstream ss; ss >> a;
+
 atoi(str.c_str())//<stdlib.h>，先把str转char数组在转基本类型
 atof(str.c_str())
 
