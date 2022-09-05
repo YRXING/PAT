@@ -58,12 +58,18 @@ replace(it1,it2,str2)
 */
 to_string()//基本类型转string,c++11新特性
 stringstream ss;ss << a;ss.str() //利用stringstream
+/*
+stringstream相当于一个中间代理，任何类型都可输入进去，而它也可以输出到任何其他类型。
+*/
 
 stoi,stol,stoll,stof //...string转基本类型
 stringstream ss; ss >> a;
 
 atoi(str.c_str())//<stdlib.h>，先把str转char数组在转基本类型
 atof(str.c_str())
+sprintf(ch,"%d", i) //基本类型转char字符串
+
+string s(c),s2=c; //char*到string可以直接赋值或初始化
 
 
 //map
