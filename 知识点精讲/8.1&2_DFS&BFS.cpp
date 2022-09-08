@@ -132,10 +132,10 @@ int X[4] = {0,0,1,-1};
 int Y[4] = {1,-1,0,0};
 int n,m; // 行和列
 int maze[maxn][maxn];//迷宫信息
-int vis[maxn][maxn]={false};
+int inq[maxn][maxn]={false};
 bool judge(int x,int y){
   if(x>=n||x<0||y>=m||y<0) return false;
-  if(maze[x][y] == '*'|| vis[x][y]) return false;
+  if(maze[x][y] == '*'|| inq[x][y]) return false;
   return true;
 }
 
@@ -153,7 +153,7 @@ int BFS(){
         Node.x = newX,Node.y = newY;
         Node.step = top.step + 1;
         q.push(Node);
-        vis[newX][newY] = true;
+        inq[newX][newY] = true;
       }
     }
   }
